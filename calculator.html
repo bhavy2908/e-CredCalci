@@ -1,0 +1,85 @@
+<html>
+
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="css/calculator.css">
+</head>
+
+
+
+<body>
+    <header>
+
+        <div class="main">
+            <div class="logo">
+                <img src="image/image.jpg" alt="">
+            </div>
+            <ul>
+                <li><a href="aboutus.html"> About </a></li>
+                <li><a href="contactus.html"> Contact Us </a></li>
+            </ul>
+        </div>
+    </header>
+    <section style="width: 50%; float: left; height: 90vh;">
+
+    </section>
+    <section style="width: 50%; float: right; height: 90vh;">
+        <div class="circle" style="margin-left: auto; margin-right: auto; margin-top: 20vh; margin-bottom: auto;">
+            <div class="fill">
+            </div>
+            <h3 class="score">72.7%</h3>
+            <style>
+                .circle {
+                    position: relative;
+                    width: 350px;
+                    height: 350px;
+                    background: #bdc3c7;
+                    -webkit-border-radius: 100px;
+                    -moz-border-radius: 100px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                }
+
+                @keyframes xyzanimation {
+                    0% {
+                        height: 0%;
+                    }
+
+                    100% {
+                        height: 72.7%;
+                    }
+                }
+
+                .fill {
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    height: 72.7%;
+                    background: #ac3aee;
+                    animation: 2s ease-out 0s 1 xyzanimation;
+                }
+
+
+                .score {
+                    position: absolute;
+                    width: 100%;
+                    top: 90px;
+                    text-align: center;
+                    font-family: Arial, sans serif;
+                    color: #fff;
+                    font-size: 60pt;
+                    line-height: 0;
+                    font-weight: normal;
+                }
+            </style>
+            <script>
+                var score = $(".score").text();
+
+                $(".fill").css("height", score);
+            </script>
+        </div>
+    </section>
+
+</body>
+
+</html>
