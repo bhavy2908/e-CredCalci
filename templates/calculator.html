@@ -2,7 +2,7 @@
 
 <head>
     <title>Dashboard</title>
-    <link rel="stylesheet" type="text/css" href="css/calculator.css">
+    <link rel="stylesheet" type="text/css" href={{ url_for('static', filename='css/calculator.css' )}}>
 </head>
 
 
@@ -15,17 +15,19 @@
                 <img src="image/image.jpg" alt="">
             </div>
             <ul>
-                <li><a href="aboutus.html"> About </a></li>
-                <li><a href="contactus.html"> Contact Us </a></li>
-                <li><a href="dashboard.html"> Logout </a></li>
+                <li><a href="/aboutus"> About </a></li>
+                <li><a href="/dashboard"> Logout </a></li>
             </ul>
         </div>
     </header>
     <section style="width: 50%; float: left; height: 90vh;">
-        <div class="card"style="margin-left: auto; margin-right: auto; margin-top: 25vh; margin-bottom: auto;" >
-            <img src="image/user.jpg" alt="Denim Jeans" style="width:100%">
-            <h2>Hello Ian!</h2>
-            <p class="info"><h3>Everything looks pretty well here.</h3></p>
+        <div class="card" style="margin-left: auto; margin-right: auto; margin-top: 25vh; margin-bottom: auto;">
+            <img src="https://www.cheatsheet.com/wp-content/uploads/2020/09/Ian-Somerhalder-2.jpg" alt="Denim Jeans"
+                style="width:100%">
+            <h2>Hello {{data.name}}</h2>
+            <p class="info">
+            <h3>Total Orders: {{data.total}}   Returned Orders: {{data.ret}}</h3>
+            </p>
             <p><button>Refresh Score</button></p>
         </div>
     </section>
@@ -33,7 +35,7 @@
         <div class="circle" style="margin-left: auto; margin-right: auto; margin-top: 20vh; margin-bottom: auto;">
             <div class="wave">
             </div>
-            <h3 class="score">72<a style="font-size: 35pt;">/</a><a style="font-size: 25pt;">100</a></h3>
+            <h3 class="score">{{data.credit}}<a style="font-size: 35pt;">/</a><a style="font-size: 25pt;">100</a></h3>
             <style>
                 .circle {
                     position: relative;
@@ -150,11 +152,6 @@
                     opacity: 0.7;
                 }
             </style>
-            <!-- <script>
-                var score = $(".score").text();
-
-                $(".fill").css("height", score);
-            </script> -->
         </div>
     </section>
 

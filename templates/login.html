@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Login</title>
+  <link rel="stylesheet" href={{ url_for('static', filename='css/login.css' )}}>
+  <script src="js/login.js"> </script>
+</head>
+
+<body>
+  <div class="main">
+    <div class="logo">
+      <!-- <img src="image/image.jpg" alt=""> -->
+    </div>
+    <ul>
+      <li><a href="/dashboard"> Dashboard </a></li>
+      <li><a href="/aboutus"> About </a></li>
+    </ul>
+  </div>
+  <form method="POST" action="/calculator">
+    <div class="login-box">
+      <h1>Login</h1>
+      <div class="textbox">
+        <i class="fas fa-user"></i>
+
+        <input name="username" autocomplete="username" type="text" placeholder="User Id" id="username">
+      </div>
+
+      <div class="textbox">
+        <i class="fas fa-lock"></i>
+        <input type="password" placeholder="Password" id="password">
+      </div>
+
+      <input type="submit" class="btn" value="Login">
+    </div>
+</body>
+
+</html>

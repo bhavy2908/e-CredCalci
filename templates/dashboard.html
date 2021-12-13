@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>e-CredCalci</title>
-    <link rel="stylesheet"type="text/css" href="css/dashboard.css">
+    <link rel="stylesheet"type="text/css" href={{ url_for('static', filename='css/dashboard.css' )}}>
 </head>
 <body>
     <header>
@@ -13,8 +13,7 @@
             </div>
             <ul>
                 <!-- <li><a href="dashboard.html"> Dashboard </a></li> -->
-                <li><a href="aboutus.html"> About </a></li>
-                <li><a href="contactus.html"> Contact Us </a></li>
+                <li><a href="/aboutus"> About </a></li>
             </ul>
         </div>
         <div class="title">
@@ -22,8 +21,7 @@
             <h2>Credit scoring is a statistical analysis performed by lenders and financial institutions to determine the creditworthiness of a person or a small, owner-operated business. Credit scoring is used by lenders to help decide whether to extend or deny credit.</h2> 
         </div>
         <div class="button">
-            <a href="signup.html"class="btn">Sign up</a>
-            <a href="login.html"class="btn">Login</a>
+            <a href="/login"class="btn">Login</a>
         </div>
     </header>
 </body>
